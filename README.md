@@ -12,6 +12,6 @@ Under extension is where the filter phrase is.
 
 ## Run
 
-Input ```python main.py``` into the shell to start the process
+Input ```python dir_manager.py``` into the shell to start the process
 
 Input ```python reset.py``` into the shell to revert the process

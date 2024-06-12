@@ -23,7 +23,7 @@ def checkExtension(name, extensions):
 
 def sortFile(orgpath, newpath, filter):
     if checkExtension(orgpath, filter):
-        # shutil.move(orgpath, f'{newpath}/{orgpath}')
+        shutil.move(orgpath, f'{newpath}/{orgpath}')
         return True
 
 def checkDir(dir_ext):
