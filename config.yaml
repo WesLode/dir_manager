@@ -1,0 +1,16 @@
+# A setup for the dir sorting
+
+dir: Downloads
+subcat:
+  item1:
+    name: pic
+    extension:
+    - gif
+    - jpg
+    - png
+  item2:
+    name: documents
+    extension:
+    - pdf
+    - .doc
+
