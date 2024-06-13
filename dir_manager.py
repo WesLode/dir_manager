@@ -5,6 +5,7 @@ import os
 import shutil
 import yaml
 
+from utils import get_logger, get_time_stamp
 
 main_path = 'C:\\Users\\$USERNAME\\'
 
@@ -39,6 +40,8 @@ def main():
     listdir = os.listdir(os.getcwd())
     
     result_count = {}
+    log = get_logger('File Sort')
+    log.info(f'Process Started')
     
     for sub_folder in data1['subcat']:
         checkDir(data1['subcat'][sub_folder]['name'])
@@ -50,8 +53,12 @@ def main():
             if sortFile(i, data1['subcat'][sub_folder]['name'], data1['subcat'][sub_folder]['extension']):
                 result_count[data1['subcat'][sub_folder]['name']] += 1
 
+
     for r in result_count:
-        print(f'{result_count[r]} files has been moved to {r}')
+        log.info(f'{result_count[r]} files has been moved to {r}')
+
+    
+    log.info('Process Ended')
 
 
 if __name__ == "__main__":
