@@ -3,3 +3,7 @@
 .idea**
 
 local_**
+
+**.log
+
+_pycache_**
