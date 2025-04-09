@@ -1,5 +1,6 @@
 # A setup for the dir sorting
 
+parentDir: C:\\Users\\$USERNAME\\
 dir: Downloads
 subcat:
   item1:
@@ -13,4 +14,10 @@ subcat:
     extension:
     - pdf
     - .doc
-
+rename:
+  rename1:
+    old: 'copy'
+    new: 'copy3'
+  rename2:
+    old: ' '
+    new: ''

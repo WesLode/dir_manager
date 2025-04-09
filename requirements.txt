@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+nba_api
+matplotlib
+tabulate
+Flask
+pyyaml

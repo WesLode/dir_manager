@@ -2,18 +2,36 @@ import uuid
 import logging
 import os
 import time
+from pathlib import Path
+
 
 from datetime import datetime
 
-
-loc_dir = os.getcwd()
-detail_log_file = f'{loc_dir}\\dir_manager_full.log'
-log_file = f'{loc_dir}\\dir_manager_sum.log'
+class log_dir():
+    def __init__(self):
+        
+        self.loc_dir = os.getcwd()
+        self.detail_log_file = f'{self.loc_dir}\\log\\dir_manager_full.log'
+        self.log_file = f'{self.loc_dir}\\log\\dir_manager_sum.log'
 
 def get_time_stamp():
     return datetime.now().strftime(DATETIME_FORMAT)
 
+def make_dir(path):
+    directory_path = Path(path)
+
+    try:
+        directory_path.mkdir(parents=True, exist_ok=False)
+    except FileExistsError:
+        pass
+
 def get_logger(name):
+    make_dir(f'loglolol')
+    loc_dir = os.getcwd()
+    detail_log_file = f'{loc_dir}\\log\\dir_manager_full.log'
+    log_file = f'{loc_dir}\\log\\dir_manager_sum.log'
+    make_dir(f'{loc_dir}\\log')
+
     logger = logging.getLogger(name)
     # logger.setLevel('INFO')
 
