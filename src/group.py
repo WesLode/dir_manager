@@ -1,5 +1,5 @@
 import os
-from src.utils import get_logger, get_time_stamp
+from utils import get_logger, get_time_stamp
 import yaml
 
 def default_config():
